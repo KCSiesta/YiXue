@@ -1,0 +1,60 @@
+.course-view{
+  margin-top: 20px;
+  padding: 0px 50px;
+  width: 100%;
+}
+.course-view:after{
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+/*兼容IE6*/
+.course-view{
+	zoom: 1;
+}
+
+.left-image{
+  width: 40%;
+  float: left;
+}
+.left-image img{
+  height: 300px;
+  width: 450px;
+}
+.right-title{
+  height: 380px;
+}
+.right-title h2{
+  padding: 30px;
+}
+.price{
+  padding: 0 50px;
+  font-size: 20px;
+  background: #7b7979;
+  color: red;
+  width: 10%;
+}
+
+.buy-it,.add-it{
+  width: 100px;
+  /* display: block; */
+  height: 40px;
+  display: inline-block;
+  /* float: left; */
+  /* position: absolute; */
+  border: 1px solid red;
+  border-radius: 5px;
+  background: #fff;
+  color: red;
+  font-size: 16px;
+  text-align: center;
+  padding: 5px 0;
+  float: left;
+  margin-right: 45px;
+  margin-top: 60px;
+}
+
+.course-desc{
+  margin-bottom: 30px;
+}

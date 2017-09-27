@@ -1,0 +1,7 @@
+.ant-tabs-bar{
+  width: 27%;
+  float: right;
+}
+.ant-tabs-tab-active,.ant-tabs-tab:hover{
+  color: #30735c;
+}

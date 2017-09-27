@@ -1,0 +1,19 @@
+/*侧边栏--导航样式*/
+.sidebar{
+	  width: 25%;
+    padding: 0 0 0 50px;
+    float: left;
+    margin: 10px 0;
+}
+
+.s-menu{
+	height: 400px;
+}
+
+.menu-submenu{
+	padding: 30px;
+}
+
+.menu-submenu span{
+	font-size: 16px;
+}
