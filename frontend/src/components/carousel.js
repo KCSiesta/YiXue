@@ -17,7 +17,7 @@ class Imgbox extends React.Component{
   }
   render(){
     return(
-      <Carousel autoplay>
+      <Carousel>
           <div><h3>嵌入式和软件开发</h3><img className='Img-item' src={ Img1 } alt='开发技术'/ ></div>
           <div><h3>软件开发</h3><img className='Img-item' src={ Img2 } alt='系统管理'/ ></div>
           <div><h3>网页开发</h3><img className='Img-item' src={ Img3 } alt='数据库管理'/ ></div>

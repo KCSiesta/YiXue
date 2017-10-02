@@ -3,8 +3,9 @@ import { FETCH_COURSE_LIST }from '../constants/actionTypes';
 
 export function fetchData(state = [], action){
   switch (action.type) {
-    case 'FETCH_COURSE_LIST.SUCCESS': {
-      return [...action.payload]
+    case FETCH_COURSE_LIST.SUCCESS: {
+      return [...action.payload];
+      //console.log([...action.payload]);
     }
     default:{
       return state;
@@ -18,5 +19,5 @@ export default combineReducers({
 
 //selector
 export const getState = (state) => {
-  return state.courseListReducer
-}
+  return state.courseListReducer;
+};

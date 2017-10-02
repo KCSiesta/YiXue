@@ -8,8 +8,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, hashHistory, browserHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
-import P from 'prop-types';
-
+import {PropTypes} from 'prop-types';
 // ==================
 // 所需的所有组件
 // ==================
@@ -21,23 +20,31 @@ const { Header,Content,Footer } = Layout;
 import Imgbox from'../../components/carousel';
 import Sidebar from '../../components/sidebar';
 //import Recomoudle from '../../components/card';
-import Tab from '../../components/tab';
+import CourseListView from '../courseList';
+//import CourseListView from '../../components/Course/CourseListView';
 // ==================
 // 本页面所需action
 // ==================
 
-//import appAction from '../../a_action/app-action';
+//import fetchData from '../../actions/courseList';
 
 // ==================
 // Definition
 // ==================
 
-class HomePageContainer extends React.Component {
+export default class HomePageContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
     };
   }
+  /*getChildContext() {
+    return{
+      loading: this.props.loading,
+      items: this.props.items,
+      fetchData: this.props.fetchData
+    };
+  }*/
   render() {
     return (
       <Layout className="layout">
@@ -64,31 +71,12 @@ class HomePageContainer extends React.Component {
                    <SearchBar />
               </div>
           </Header>
-          <Content clssName='content'>
+          <Content className='content'>
              <div className='gallery'>
                  <div className='sidebar'><Sidebar /></div>
                  <div className='carousel'><Imgbox /></div>
              </div>
-             <div className='recom-moudle'>
-                  <h2>嵌入式与移动开发</h2>
-                  <Tab />
-                  <Link to='/course' className='more'>更多</Link>
-             </div>
-             <div className='recom-moudle'>
-                  <h2>软件开发</h2>
-                  <Tab />
-                  <Link to='/course' className='more'>更多</Link>
-             </div>
-             <div className='recom-moudle'>
-                  <h2>网页开发</h2>
-                  <Tab />
-                  <Link to='/course' className='more'>更多</Link>
-             </div>
-             <div className='recom-moudle'>
-                  <h2>游戏开发</h2>
-                  <Tab />
-                  <Link to='/course' className='more'>更多</Link>
-             </div>
+             <CourseListView />
           </Content>
           <Footer className='footer'>
              Ant Design ©2016 Created by Ant UED
@@ -101,20 +89,24 @@ class HomePageContainer extends React.Component {
 // ==================
 // PropTypes
 // ==================
-
+/*CourseListView.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  items: PropTypes.array.isRequired,
+  fetchData: PropTypes.func.isRequired
+};*/
 HomePageContainer.propTypes = {
-  location: P.any,
-  history: P.any,
+  location: PropTypes.any,
+  history: PropTypes.any,
+  children: PropTypes.any
 };
 
 // ==================
 // Export
 // ==================
 
-export default connect(
-  (state) => ({
-    testvalue: state.app.inputvalue,
-    fetchValue: state.app.fetchvalue,
+(state) => (({
+    testvalue: state.appReducer.inputvalue,
+    fetchValue: state.appReducer.fetchvalue,
   }),
   (dispatch) => ({
     actions: bindActionCreators({}, dispatch),

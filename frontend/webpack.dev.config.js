@@ -38,9 +38,9 @@ module.exports = {
         loaders: [
             // 解析.js,.jsx,用babel解析器，webpack会自动加载我们配置的.babelrc文件
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel',
+              test: /\.js$/,
+              exclude: /node_modules/,
+              loader: 'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-0'
             },
             // 解析.css,先执行css-loader,再执行style-loader
             // 注意：连node_modules中的也一并解析
@@ -67,6 +67,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]',
             }
+
         ]
     },
     /* 配置一些额外的webpack插件 */

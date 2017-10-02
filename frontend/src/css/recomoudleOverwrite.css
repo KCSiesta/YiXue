@@ -14,20 +14,25 @@
 .r-moudle{
 	zoom: 1;
 }
-
+.ant-card-body{
+  height: 100%;
+}
+.ant-card .card-item .ant-card-bordered{
+  margin:5px;
+}
 .card-item {
+  margin: 9.4px;
   width: 19.30%;
   height: 350px;
   float: left;
   background: '#ECECEC';
-  margin: 5px;
 }
 .card-item:first-child{
   margin-left: 0;
 }
-.card-item:last-child{
+/*.card-item:last-child{
   margin-right: 0;
-}
+}*/
 .course-image img {
   display: block;
 }
@@ -36,7 +41,7 @@
 }
 .course-card{
   position: absolute;
-  bottom: 30px;
+  width: 81%;
 }
 
 .course-card p {
@@ -56,4 +61,5 @@
   font-size: 14px;
   color: #fff;
   margin: 5px;
+  float: right;
 }

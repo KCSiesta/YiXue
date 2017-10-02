@@ -1,15 +1,6 @@
 {
 
   "presets": ["es2015", "stage-3", "react"],
-  "plugins": [["import",[
-    {
-        "libraryName": "antd",
-        "libraryDirectory": "lib",
-        "style": true
-    },
-   {
-        "libraryName": "antd-mobile",
-        "libraryDirectory": "component",
-   },
-  ]]]
+   "plugins": ["transform-class-properties"]
+
 }

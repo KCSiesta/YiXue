@@ -12,15 +12,16 @@ import appReducer from './app-reducer'; // 这个稍后创建
 import commonReducer from './common';
 import courseReducer from './course';
 import courseListReducer from './courseList';
+
 /* 利用官方提供的combineReducers将所有reducer组合成一个 */
 const RootReducer = combineReducers({
   // 注意一定要加上routing: routerReducer 这是用于redux和react-router的连接
-  routing: routerReducer,
+  routerReducer,
   // 其他的reducers
-  common: commonReducer,
-  course: courseReducer,
-  courseList: courseListReducer,
-  app: appReducer // 这里的命名，关系到container中取state对应的reducer的名字
+  commonReducer,
+  courseReducer,
+  courseListReducer,
+  appReducer // 这里的命名，关系到container中取state对应的reducer的名字
 });
 
 export default RootReducer;

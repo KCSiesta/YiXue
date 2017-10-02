@@ -27,9 +27,23 @@ app.get('/user/getCascadedType', function(req,res) {
   });
 })
 
+app.get('/user/getCourseByType/:type', function(req,res) {
+  var sreq = request.get(HOST + req.originalUrl)
+  sreq.pipe(res);
+  sreq.on('end', function (error, res) {
+    console.log('end');
+  });
+})
+
+app.get('/user/getCourseById/:id', function(req,res) {
+  var sreq = request.get(HOST + req.originalUrl)
+  sreq.pipe(res);
+  sreq.on('end', function (error, res) {
+    console.log('end');
+  });
+})
+
 //start a server
 var server = app.listen(8888, function(){
-    var host = server.address().address;
-    var port = server.address().port;
     console.log('HTTP Server is running in http://127.0.0.1:8888');
 });

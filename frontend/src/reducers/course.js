@@ -5,8 +5,9 @@ export const fetchData = (state = {}, action) => {
   switch (action.type) {
     case FETCH_COURSE.SUCCESS: {
       return action.payload;
+      //console.log([...action.payload]);
     }
-    default: {
+    default:{
       return state;
     }
   }

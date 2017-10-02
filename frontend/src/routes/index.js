@@ -7,11 +7,14 @@ import RootContainer from '../containers/root';
 import TestContainer from '../containers/home'; // 一个主页的container
 import TestContainer2 from '../containers/course';
 
+import courseList from '../containers/courseList';
 export default (
   <Route path="/" component={RootContainer}> // 所有的访问，都跳转到rootContainer
-    <IndexRedirect to="/home" /> // 默认加载的组件，比如访问www.test.com,会自动跳转到www.test.com/home
+    //<IndexRedirect to="/home" /> // 默认加载的组件，比如访问www.test.com,会自动跳转到www.test.com/home
+    <IndexRedirect to="/home"  component={TestContainer}/>
     <Route path="/home" component={TestContainer} /> // 一个路由地址，访问www.test.com/home,就会跳转到此
-    <Route path="/course" component={TestContainer2} /> 
+    <Route path="/course" component={TestContainer2} />
+    <Route path="/course/:id" component={TestContainer2} />
     <Redirect from='*' to='/'  /> // 所有的其他未定义的访问路径，都跳转到根路径，比如访问www.test.com/abc, 但是/abc我们没有定义，就会自动跳转到www.test.com, 而www.test.com又会自动跳转到www.test.com/home
   </Route>
 );

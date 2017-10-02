@@ -13,12 +13,12 @@ const mapStatetoProps = (state) => {
 };
 
 const mapDispatchtoProps = (dispatch) => {
-  const actions = bindActionCreators(actionCreators,dispatch);
-  return{
-    fetchData: actions.fetchData
+  const actions = bindActionCreators(actionCreators, dispatch);
+  return {
+    fetchData: actions.fetchData,
   };
 };
-
+    //console.log(fetchData);
 export default connect(
   mapStatetoProps,
   mapDispatchtoProps
