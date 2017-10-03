@@ -10,6 +10,7 @@ import { routerReducer } from 'react-router-redux';
 /* 这里是我们自定义的各种reducer */
 import appReducer from './app-reducer'; // 这个稍后创建
 import commonReducer from './common';
+import menuReducer from './menu';
 import courseReducer from './course';
 import courseListReducer from './courseList';
 
@@ -19,6 +20,7 @@ const RootReducer = combineReducers({
   routerReducer,
   // 其他的reducers
   commonReducer,
+  menuReducer,
   courseReducer,
   courseListReducer,
   appReducer // 这里的命名，关系到container中取state对应的reducer的名字

@@ -17,9 +17,9 @@ app.all('*', function (req, res, next) {
   // res.set('Access-Control-Allow-Max-Age', 3600);
   if ('OPTIONS' == req.method) return res.send(200);
   next();
-});
+})
 
-app.get('/user/getCascadedType', function(req,res) {
+app.get('/user/getCascadedType/:id', function(req,res) {
   var sreq = request.get(HOST + req.originalUrl)
   sreq.pipe(res);
   sreq.on('end', function (error, res) {

@@ -41,9 +41,9 @@ export function fetchData(type = API.COURSE_TYPE_FRONT.HTML) {
               .then(response => response.json())
               .then(items => {
                   dispatch(fetchSuccess(items));
-                  //console.log(dispatch(fetchSuccess(items)));
-                  //setState({items})
+                  console.log(items);
               })
+              //.then(fetchData(type = API.COURSE_TYPE_BACK.JAVA))
               .catch();
     };
 }

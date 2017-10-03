@@ -16,6 +16,8 @@ class CourseView extends React.Component{
   /*componentDidMount(){
     this.props.fetchData('http://119.23.79.230:8080/study/user/getCourseByType?typeId=10');
   }*/
+  /*CoueseView组件可以通过params.id访问实际的参数值，params.id 等于<Route path='course/:id'>中的路由参数，
+  并通过props传给了页面组件，这样方便访问路由相关的数据*/
   componentWillMount(){
     const { fetchData, params } = this.props;
     fetchData(params.id);
@@ -33,9 +35,9 @@ class CourseView extends React.Component{
   };
   renderCourseSubject(){
       const {data} = this.state;
-      console.log(data);
- if(typeof data[0] !== 'undefined'){
-   return(
+      //console.log(data);
+    if(typeof data[0] !== 'undefined'){
+    return(
        <div className='course-view'>
        <div className='left-image'>
          <img alt='example' width='100%' src={data[0].url} />

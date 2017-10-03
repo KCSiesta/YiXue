@@ -15,13 +15,16 @@ class Imgbox extends React.Component{
 
     };
   }
+
   render(){
     return(
-      <Carousel>
-          <div><h3>嵌入式和软件开发</h3><img className='Img-item' src={ Img1 } alt='开发技术'/ ></div>
-          <div><h3>软件开发</h3><img className='Img-item' src={ Img2 } alt='系统管理'/ ></div>
-          <div><h3>网页开发</h3><img className='Img-item' src={ Img3 } alt='数据库管理'/ ></div>
-          <div><h3>游戏开发</h3><img className='Img-item' src={ Img4 } alt='网络设备管理'/ ></div>
+    <Carousel>
+          <div><h3>HTML入门</h3><img className='Img-item' src={ Img1 } alt='HTML入门'/ ></div>
+          <div><h3>HTML进阶</h3><img className='Img-item' src={ Img2 } alt='HTML进阶'/ ></div>
+          <div><h3>UI设计</h3><img className='Img-item' src={ Img3 } alt='UI设计'/ ></div>
+          <div><h3>游戏开发</h3><img className='Img-item' src={ Img4 } alt='游戏开发'/ ></div>
+          <div><h3>游戏开发</h3><img className='Img-item' src={ Img5 } alt='游戏开发'/ ></div>
+          <div><h3>游戏开发</h3><img className='Img-item' src={ Img6 } alt='游戏开发'/ ></div>
       </Carousel>
     );
   }
